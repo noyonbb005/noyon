@@ -1,0 +1,6 @@
+{
+  "name": "OrangeShop Marketplace",
+  "description": "A mobile-first shopping marketplace featuring banner sliders, category grids, flash deals, quick orders, and a complete admin panel for product management, pricing, and order fulfillment in a clean white and orange theme.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

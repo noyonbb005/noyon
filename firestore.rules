@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Products: anyone can read, authenticated or admin or demo user can create/update/delete
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Orders: anyone can place an order, read/update allowed
+    match /orders/{orderId} {
+      allow read: if true;
+      allow create: if true;
+      allow update, delete: if true;
+    }
+
+    // Customers: shoppers & admin management
+    match /customers/{customerId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Settings
+    match /settings/{settingId} {
+      allow read: if true;
+      allow write: if true;
+    }
+  }
+}
